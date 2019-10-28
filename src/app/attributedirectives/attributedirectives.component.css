@@ -1,0 +1,30 @@
+
+.bold-text{
+  font-weight:bold;
+}
+.green{
+  color:green;
+}
+.orange{
+  color:orcange;
+
+}
+.red{
+  color:red;
+}
+.show-class{
+  visibility:visable;
+}
+.hide-class{
+  visibility:hidden;
+
+}
+.italic-text{
+  font-style:italic;
+
+}
+.small-text{
+  font-size:18px;
+}
+
+

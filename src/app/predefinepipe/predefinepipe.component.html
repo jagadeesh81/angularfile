@@ -1,0 +1,16 @@
+<p>predefinepipe works!</p>
+<h1>{{myname}}</h1>
+<h1>{{myname | upperCase}}</h1>
+<h1>{{myname | lowerCase}}</h1>
+<h1>{{myname | slice:'8':'10'}}</h1>
+<h1>{{myprice | currency:'usd'}}</h1>
+<h1>{{myprice | currency:'ind':true}}</h1>
+<h1>{{mydate | date}}</h1>
+<h1>{{mydate | date:'fulldate'}}</h1>
+<h1>{{mydate | date:'shortdate'}}</h1>
+<h1>{{mydate | date:'dd/mm/yyyy'}}</h1>
+time:{{today date | date:'hh:mm'}}<br/>
+time:{{today date | date:'hh:mm:ss'}}<br/>
+<h1>{{mydate | date:'MediumTime'}}</h1>
+{{person | json}}
+{{amount | percent:'2'}}

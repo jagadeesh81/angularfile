@@ -1,0 +1,66 @@
+
+<div class="container">
+  <h2>User Registration Form</h2>
+  <form #userForm= "ngForm"(ngSubmit)="onSubmit(userForm.value)">
+    <div class="form-group">
+      <label>Name:</label><input type="text" #nameRef="ngModel" required minlength="5" maxlength="9" pattern="[a-z]+" class="form-control" name="name" ngModel>
+      <div *ngIf="nameRef.errors && (nameRef.dirty|| nameRef.touched)" class="alert alert-danger">
+       <div [hidden]="!nameRef.errors.required"> please Enter a Name</div>
+       <div [hidden]="!nameRef.errors.minlength"> please Enter altest 5to9 charaters</div>
+       <div [hidden]="!nameRef.errors.pattern"> please Enter a validdata</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>contact:</label><input type="text" #contactRef="ngModel" required minlength="5" maxlength="9" pattern="[0-9]+" class="form-control" name="contact" ngModel>
+      <div *ngIf="contactRef.errors && (contactRef.dirty|| contactRef.touched)" class="alert alert-danger">
+        <div [hidden]="!contactRef.errors.required"> please Enter a Number</div>
+        <div [hidden]="!contactRef.errors.minlength"> please Enter altest 10 charaters</div>
+        <div [hidden]="!contactRef.errors.pattern"> please Enter a validdata</div>
+       </div>
+      </div>
+      <div class="form-group">
+        <label>Email:</label><input type="text" #EmailRef="ngModel" required minlength="5" maxlength="9" pattern="[0-9]+" class="form-control" name="Email" ngModel>
+        <div *ngIf="EmailRef.errors && (EmailRef.dirty|| EmailRef.touched)" class="alert alert-danger">
+          <div [hidden]="!EmailRef.errors.required"> please Enter a Email</div>
+          <div [hidden]="!EmailRef.errors.minlength"> please Enter altest 1to 9 charaters</div>
+          <div [hidden]="!EmailRef.errors.pattern"> please Enter a validdata</div>
+         </div>
+      </div>
+      <div ngModelGroup="Address">
+        <label>street:</label><input type="text" #StreetRef="ngModel" required minlength="5" maxlength="9" pattern="[0-9]+" class="form-control" name="Street" ngModel>
+        <div *ngIf="StreetRef.errors && (StreetRef.dirty|| StreetRef.touched)" class="alert alert-danger">
+          <div [hidden]="!StreetRef.errors.required"> please Enter a Street</div>
+          <div [hidden]="!StreetRef.errors.minlength"> please Enter altest 1 to 9 charaters</div>
+          <div [hidden]="!StreetRef.errors.pattern"> please Enter a validdata</div>
+         </div>
+      </div>
+      <div class="form-group">
+        <label>City:</label><input type="text"required class="form-control" name="City" ngmodel> 
+        <div *ngIf="nameRef.errors && (nameRef.dirty|| nameRef.touched)" class="alert alert-danger">
+          <div [hidden]="!nameRef.errors.required"> please Enter a City</div>
+          <div [hidden]="!nameRef.errors.minlength"> please Enter altest 1 to 9 charaters</div>
+          <div [hidden]="!nameRef.errors.pattern"> please Enter a validdata</div>
+         </div>
+      </div>
+      <div class="form-group">
+        <label>PostalCode:</label><input type="text" required class="form-control" name="PostalCode" ngmodel>
+         <div *ngIf="nameRef.errors && (nameRef.dirty|| nameRef.touched)" class="alert alert-danger">
+        <div [hidden]="!nameRef.errors.required"> please Enter a Number</div>
+        <div [hidden]="!nameRef.errors.minlength"> please Enter altest 10 charaters</div>
+        <div [hidden]="!nameRef.errors.pattern"> please Enter a validdata</div>
+       </div> 
+      </div>  
+    <button [disabled]="!userForm.form.valid" type="submit" class="btn btn-danger">Submit</button>
+  </form>
+
+
+</div>
+<app-diertives></app-diertives>
+<app-directivesif></app-directivesif>
+<app-directivesswitch></app-directivesswitch>
+<app-attributedirectives></app-attributedirectives>
+<app-styledirectives></app-styledirectives>
+<app-direativecreation></app-direativecreation>
+<app-mouseoverleave></app-mouseoverleave>
+<app-predefinepipe></app-predefinepipe>
+
