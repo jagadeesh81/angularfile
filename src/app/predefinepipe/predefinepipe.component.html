@@ -1,16 +1,32 @@
 <p>predefinepipe works!</p>
 <h1>{{myname}}</h1>
-<h1>{{myname | upperCase}}</h1>
-<h1>{{myname | lowerCase}}</h1>
+<h1>{{myname | uppercase}}</h1>
+<h1>{{myname | lowercase}}</h1>
 <h1>{{myname | slice:'8':'10'}}</h1>
-<h1>{{myprice | currency:'usd'}}</h1>
-<h1>{{myprice | currency:'ind':true}}</h1>
+
+{{[1,2,3,4,5,6,7] | slice:1:3}}<br>
+{{[1,2,3,4,5,6,7] | slice:2}}<br>
+{{[1,2,3,4,5,6,7] | slice:2:-3}}
+
+<h2>{{mynumber | number}}</h2>
+<h2>{{mynumber | number:'3.4-6'}}</h2>
+<h2>{{mynumber2 | number:'3.4-6'}}</h2>
+
+ <h2>{{mynumber | percent}}</h2>
+<h2>{{mynumber | percent:'2.3-5'}}</h2>
+<h2>{{mynumber2 | percent:'2.3-5'}}</h2>
+
+<h1>{{myprice | currency:'USD'}}</h1>
+<h1>{{myprice | currency:'IND':true}}</h1>
+<h1>{{myprice | currency:'IND':false}}</h1>
+
 <h1>{{mydate | date}}</h1>
-<h1>{{mydate | date:'fulldate'}}</h1>
-<h1>{{mydate | date:'shortdate'}}</h1>
-<h1>{{mydate | date:'dd/mm/yyyy'}}</h1>
-time:{{today date | date:'hh:mm'}}<br/>
-time:{{today date | date:'hh:mm:ss'}}<br/>
-<h1>{{mydate | date:'MediumTime'}}</h1>
+<h1>{{mydate | date:'fullDate'}}</h1>
+<h1>{{mydate | date:'shortDate'}}</h1>
+<h1>{{mydate | date:'dd/MM/yyyy'}}</h1>
+time:{{todaydate | date:'hh:mm'}}<br/>
+time:{{todaydate | date:'hh:mm:ss'}}<br/>
+<h1>{{mydate | date:'mediumTime'}}</h1>
+<h1>{{mydate2 | date}}</h1>
 {{person | json}}
-{{amount | percent:'2'}}
+{{amount | percent:'2'}} -->

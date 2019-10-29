@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { DiertivesComponent } from './diertives/diertives.component';
@@ -13,6 +13,10 @@ import { MouseoverleaveComponent } from './mouseoverleave/mouseoverleave.compone
 
 import { PredefinepipeComponent } from './predefinepipe/predefinepipe.component';
 import { Pipedri1Component } from './pipedri1/pipedri1.component';
+import { ApppipeComponent } from './apppipe/apppipe.component';
+import { MyBoldPipe } from './apppipe/bold-pipe';
+import { ReverseStringPipe } from './apppipe/reversebold';
+
 
 @NgModule({
   declarations: [
@@ -24,11 +28,11 @@ import { Pipedri1Component } from './pipedri1/pipedri1.component';
     StyledirectivesComponent,
     DireativecreationComponent,
     MouseoverleaveComponent,
- 
     PredefinepipeComponent,
- 
     Pipedri1Component,
-
+    ApppipeComponent,
+    MyBoldPipe,
+    ReverseStringPipe,
    
   ],
   imports: [
